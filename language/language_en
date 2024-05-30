@@ -1,0 +1,24 @@
+texte = {
+    'title' : 'Cinema Club',
+    'desc' : 'GreNaCle, the data analyst of the future (or future data analysts, I don\'t know what the right order is).',
+    'select_langue' : "Choose your language ",
+    'tabs_title1' : "Home",
+    'tabs_title2' : "Search a movie",
+    'tabs_title3' : "Movie recommendation",
+    'intro_wlecome_tabs' : "Presentation page, bla bla bla, pizza, bla bla",
+    't_derniere_sorties' : 'Trending films ',
+    'buton_lf' : 'Search',
+    't_lf_result_1' : 'Result for ',
+    't_lf_result_2' : 'films found. Here is the most relevant result:',
+    't_select_box_other_result' : 'Other film found containing the same name: ',
+    't_select_box_main_lf' : 'Enter a movie you enjoyed:',
+    't_html_1' : ['Director: ','Producer: ','Budget: ', 'Recipe: ', 'Actor: ', 'Actress: '],
+    't_html_2_1' : 'Director',
+    't_html_2_2' : 'Released year',
+    't_result' : 'Here you go !',
+    'title_lf_film' : 'Search for a movie',
+    'title_recomandation' : 'Movie recommendation',
+    'accroche' : 'Find the movie meant to you',
+
+
+}
