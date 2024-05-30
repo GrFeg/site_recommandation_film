@@ -1,7 +1,7 @@
 # Site Streamlit Recommandation de film
-Site internet lié à une base de donnée filtré provennant de TMDB pour conseiller et renseigner sur des films.
+Site internet lié à une base de données filtré provenant de TMDB pour conseiller et renseigner sur des films.
 
-Outils développé dans ce projet:
+Outils développé dans ce projet :
   - Pytohn
   - API
   - HTML / CSS
