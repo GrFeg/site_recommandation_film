@@ -12,8 +12,8 @@ if 1:
     import streamlit.components.v1 as components
     import pandas as pd
     import ml
-    import france
-    import english
+    import language_fr
+    import language_en
     from PIL import Image
     import requests
     from io import BytesIO
@@ -114,7 +114,6 @@ def init():
 
     st.session_state.init = False
     api()
-    print("YOUPLAOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU")
 
 ##################################################################################################################################################
 
@@ -312,7 +311,6 @@ def affichage_recommandation_film(df, recherche):
         nom_film = []
         for titre in liste_titre:
             nom_film.append(df['primaryTitle'][df['title'] == titre].unique()[0])
-        print("LAAAAAAAAAAA", liste_titre, nom_film)
     else:
         nom_film  = liste_titre
 
@@ -416,9 +414,9 @@ if st.session_state.init:
 
 #Langue
 if st.session_state.langue == "Français":
-    texte = france.texte
+    texte = language_fr.texte
 if st.session_state.langue == "English":
-    texte = english.texte
+    texte = language_en.texte
 
 ####################################################### Début du Site ############################################################################
 
