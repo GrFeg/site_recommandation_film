@@ -32,22 +32,22 @@ if 1:
 ############################################################ API #################################################################################
 
 def api():
+    api_key = "" #Entrer sa clé API TBDM
+    
     #FR
     url = "https://api.themoviedb.org/3/trending/movie/day?language=fr"
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmODBhNGQ0ZTRlZmFhNTFmN2NmYTEyMWJkZDU4MjViNSIsInN1YiI6IjY2NGE1YmI0ZGVjY2IyOGNjNDdjYjRmMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2fhn_7G72_ZS8Klwn-sisfLd-4rzPvMZEhuM70PodAA"}
+        "Authorization": api_key} 
     response = requests.get(url, headers=headers)
     top5_fr = json.loads(response.text)
     top5_fr = top5_fr['results'][0:5]
-
-
 
     #EN
     url = "https://api.themoviedb.org/3/trending/movie/day?language=en-US"
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmODBhNGQ0ZTRlZmFhNTFmN2NmYTEyMWJkZDU4MjViNSIsInN1YiI6IjY2NGE1YmI0ZGVjY2IyOGNjNDdjYjRmMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2fhn_7G72_ZS8Klwn-sisfLd-4rzPvMZEhuM70PodAA"}
+        "Authorization": api_key} 
     response = requests.get(url, headers=headers)
     top5_en = json.loads(response.text)
     top5_en = top5_en['results'][0:5]
