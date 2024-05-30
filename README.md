@@ -2,7 +2,7 @@
 Site internet lié à une base de données filtré provenant de TMDB pour conseiller et renseigner sur des films.
 
 Outils développé dans ce projet :
-  - Pytohn
+  - Python
   - API
   - HTML / CSS
   - Machine Learning
