@@ -1,0 +1,81 @@
+.encadrer{
+  padding: 15px;
+  border: 1px solid #141826;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 { 
+  font-size:40px;
+}
+
+.container {
+    display: flex;
+
+  }
+
+  .container2 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 3px solid #141826;
+
+
+  }
+
+  .box_image {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 600px;
+    height: auto;
+    margin: 5px;
+    box-shadow: 10px 5px  #141826; 
+    border: 3px solid #141826;
+
+  }
+  .box_qui {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 550px;
+    height: 150px;
+    margin-left: 15px;
+    box-shadow: 10px 5px  #141826; 
+    border: 3px solid #141826;
+    margin-top: 80px;
+
+  }
+
+  .box_acteur {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 50%;
+    height: flex;
+    margin: 0px;
+    border-radius: 10px; 
+  }
+
+.img_1 {
+  display: block;
+  width: 100%; 
+  max-width: 600px;
+  height: auto; 
+}
+
+.prout {
+  margin: 5px;
+  padding: 10px;
+  box-shadow: 10px 5px  #141826; 
+  border: 3px solid #141826;
+  margin-top: 70px;
+}
+
+.synop{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
