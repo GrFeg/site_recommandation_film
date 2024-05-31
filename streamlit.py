@@ -33,34 +33,41 @@ if 1:
 
 def api():
     api_key = "" #Entrer sa clé API TBDM
+
+    lien_url = "https://api.themoviedb.org/3/trending/movie/day?language=
     
     #FR
-    url = "https://api.themoviedb.org/3/trending/movie/day?language=fr"
     headers = {
         "accept": "application/json",
         "Authorization": api_key} 
-    response = requests.get(url, headers=headers)
+    response = requests.get(lien_url + "fr", headers=headers)
     top5_fr = json.loads(response.text)
     top5_fr = top5_fr['results'][0:5]
 
     #EN
-    url = "https://api.themoviedb.org/3/trending/movie/day?language=en-US"
     headers = {
         "accept": "application/json",
         "Authorization": api_key} 
-    response = requests.get(url, headers=headers)
+    response = requests.get(url + "en-US", headers=headers)
     top5_en = json.loads(response.text)
     top5_en = top5_en['results'][0:5]
 
+    #Enregistrement des JSON dans le cache
     st.session_state.top5_fr = top5_fr
     st.session_state.top5_en = top5_en
 
-def resume_recherme_film(tconst):
+def resume_recherme_film(tconst: str):
+    '''
+    Fonction pour questionner l'API de tmbd afin de rechercher le résumé d'un film en français ou en anglais en fonction de la langue choisis.
+    '''
+
+    #Regarde dans le cache quelle langue est choisis sur le site
     if st.session_state.langue == "Français":
         langue = 'fr'
     else:
         langue = "en-US"
-    print(tconst)
+        
+    #Appel de l'API    
     url = f"https://api.themoviedb.org/3/movie/{tconst}?language={langue}"
 
     headers = {
@@ -70,6 +77,7 @@ def resume_recherme_film(tconst):
 
     reponse = json.loads(requests.get(url, headers=headers).text)
     return reponse['overview']
+    
 ##################################################################################################################################################
 
 ############################################### Définition des variables principales ###########################################################
